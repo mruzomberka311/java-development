@@ -20,7 +20,7 @@ public class Main {
 
         float pay = rate * hours;
 
-        System.out.print(pay);
+        System.out.print("$" + pay);
 
         scanner.nextLine();
 
