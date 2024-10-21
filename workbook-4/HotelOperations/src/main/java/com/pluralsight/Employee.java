@@ -65,7 +65,7 @@ public class Employee {
             return hoursWorked;
         }
 
-        return 0;
+        return 8;
     }
 
     public float getOvertimeHours() {
