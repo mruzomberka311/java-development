@@ -5,12 +5,11 @@ class RoomTest {
 
 
     @Test
-    public void checkIn_should_displayCheckedIn {
+    public void checkIn_should_displayCheckedIn() {
 
         //Arrange
     Room room1 = new Room(2,124.00);
-    boolean isOccupied = false;
-    boolean isDirty = false;
+
 
 
         //Act
@@ -19,19 +18,18 @@ class RoomTest {
 
 
         //Assert
-    boolean expectedValue = true;
-    boolean actualValue = room1.checkIn();
-    assertEquals(expectedValue,actualValue);
+   assertTrue(room1.isOccupied());
+   assertTrue(room1.isDirty());
     }
 
 
 
 
     @Test
-    public void checkOut_should_displayCheckedOut{
+    public void checkOut_should_displayCheckedOut() {
         //Arrange
     Room room2 = new Room(3, 248.00);
-    boolean occupied = false;
+    room2.checkIn();
 
 
 
@@ -43,9 +41,7 @@ class RoomTest {
 
 
         //Assert
-    boolean expectedValue = false;
-    boolean actualValue = room2.checkout();
-    asserEquals(expectedValue,actualValue);
+    assertFalse(room2.isOccupied());
     }
 
 
