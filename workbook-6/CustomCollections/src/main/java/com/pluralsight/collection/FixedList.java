@@ -7,16 +7,16 @@ public class FixedList <T> {
     private List<T> items;
     private int maxSize;
 
-    private T numbers;
-    private T dates;
+   // private T numbers;
+   // private T dates;
 
 
 
-    void item(T numbers, T dates){
+   /* void item(T numbers, T dates){
         this.numbers = numbers;
         this.dates = dates;
     }
-
+*/
 
 
     public FixedList(int maxSize) {
