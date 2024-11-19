@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    ArrayList<Person> people = new ArrayList<>();
 
-    public void main(String[] args) {
 
+    public static void main(String[] args) {
+        List<Person> people = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
 
@@ -22,6 +22,7 @@ public class Main {
         Person person8 = new Person("Gary", "Squarepants", 9);
         Person person9 = new Person("Mermaid", "Man", 82);
         Person person10 = new Person("Barnacle", "Boy", 80);
+        people.add(person1, person2, person3, person4,);
 
         System.out.println("Please enter a name");
         String name = scanner.nextLine();
@@ -35,7 +36,7 @@ public class Main {
 
 
     }
-        public void filterByName(String name){
+        public static void filterByName(String name, List<Person> people){
             for (Person person : people) {
                 if (name.equalsIgnoreCase(person.getFirstName()) || name.equalsIgnoreCase(person.getLastName())) {
                     List<Person> nameList = new ArrayList<>();
@@ -46,22 +47,24 @@ public class Main {
         }
 
 
-        public void getAverageAge(){
+        public static double getAverageAge(List<Person> people){
             double totalAge = 0;
+            double averageAge;
             for (Person person : people) {
                 totalAge += person.getAge();
                 double averageAge = totalAge /= people.size();
-                System.out.println(averageAge);
+
             }
+            return averageAge;
         }
 
-        public void displayOldest (String max) {
+        public static int displayOldest (String max, List<Person> people) {
             for (Person person : people){
-                System.out.println(Math.max(person.getAge(),));  
+                System.out.println(Math.max(person.getAge(),));
             }
         }
 
-        public void displayYoungest (String min) {
+        public static int displayYoungest (String min, List<Person> people) {
             for (Person person : people) {
                 System.out.println(Math.min(person.getAge(people)));
             }
