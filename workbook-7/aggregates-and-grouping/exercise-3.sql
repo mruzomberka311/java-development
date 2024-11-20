@@ -39,4 +39,4 @@ GROUP BY SupplierID HAVING COUNT(UnitsInStock) >= 5;
 -- Question 9
 SELECT ProductID, ProductName, (UnitPrice * UnitsInStock) AS Results
 FROM products
-ORDER BY Results DESC;
+ORDER BY Results;
