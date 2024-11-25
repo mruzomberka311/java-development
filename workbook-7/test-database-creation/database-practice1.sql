@@ -1,0 +1,44 @@
+DROP DATABASE IF EXISTS School;
+
+
+CREATE DATABASE School;
+USE School;
+
+DROP TABLE IF EXISTS Students;
+DROP TABLE IF EXISTS Courses;
+DROP TABLE IF EXISTS StudentCourses;
+
+CREATE TABLE Students ( 
+StudentID INT AUTO_INCREMENT PRIMARY KEY,
+FirstName VARCHAR(50) NOT NULL,
+LastName VARCHAR(50) NOT NULL,
+BirthDate DATE,
+EnrollmentDate DATE,
+Email VARCHAR(100)
+);
+
+CREATE TABLE Courses ( 
+CourseID INT AUTO_INCREMENT PRIMARY KEY,
+CourseName VARCHAR(100) NOT NULL,
+CourseDescription TEXT,
+Credits INT NOT NULL
+);
+
+
+CREATE TABLE StudentCourses(
+StudentCourseID INT AUTO_INCREMENT PRIMARY KEY,
+StudentID INT,
+CourseID INT,
+EnrollmentDate DATE,
+FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
+FOREIGN KEY (CourseID) REFERENCES Courses(CourseID)
+);
+
+
+
+
+
+
+
+
+
